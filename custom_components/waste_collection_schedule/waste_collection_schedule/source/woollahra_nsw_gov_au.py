@@ -1,6 +1,5 @@
 import datetime
 import json
-import re
 import time
 
 import dateutil.parser
@@ -79,7 +78,9 @@ class Source:
                     raise Exception(f"Network error: {str(e)}")
                 time.sleep(2 ** attempt)
         
-        return None
+        raise requests.exceptions.RequestException(
+            "Max retries exceeded while fetching URL"
+        )
 
     def fetch(self):
         location_id = None
@@ -206,7 +207,7 @@ class Source:
 
         return entries
 
-    def _parse_date(self, date_text: str) -> datetime.date:
+    def _parse_date(self, date_text: str) -> datetime.date | None:
         """Parse various date formats found in the response"""
         try:
             return dateutil.parser.parse(date_text, dayfirst=True, fuzzy=True).date()
