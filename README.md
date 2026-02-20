@@ -33,6 +33,7 @@ If your service provider is not listed, feel free to open a [source request issu
 - [Adelaide Hills Council](/doc/source/app_my_local_services_au.md) / ahc.sa.gov.au
 - [Adelaide Plains Council](/doc/source/app_my_local_services_au.md) / apc.sa.gov.au
 - [Alexandrina Council](/doc/source/app_my_local_services_au.md) / alexandrina.sa.gov.au
+- [Alexandrina Council](/doc/source/frwa_com_au.md) / alexandrina.sa.gov.au
 - [App Backend of My Local Services](/doc/source/app_my_local_services_au.md) / localcouncils.sa.gov.au
 - [Armadale (Western Australia)](/doc/source/armadale_wa_gov_au.md) / armadale.wa.gov.au
 - [Australian Capital Territory (ACT)](/doc/source/act_gov_au.md) / cityservices.act.gov.au/recycling-and-waste
@@ -81,6 +82,7 @@ If your service provider is not listed, feel free to open a [source request issu
 - [City of Ryde (NSW)](/doc/source/ryde_nsw_gov_au.md) / ryde.nsw.gov.au
 - [City of Salisbury](/doc/source/app_my_local_services_au.md) / salisbury.sa.gov.au
 - [City of Subiaco](/doc/source/subiaco_wa_gov_au.md) / subiaco.wa.gov.au
+- [City of Victor Harbor](/doc/source/frwa_com_au.md) / victor.sa.gov.au
 - [City of Wanneroo](/doc/source/wanneroo_wa_gov_au.md) / wanneroo.wa.gov.au
 - [City of West Torrens](/doc/source/app_my_local_services_au.md) / westtorrens.sa.gov.au
 - [City of Whyalla](/doc/source/app_my_local_services_au.md) / whyalla.sa.gov.au
@@ -101,7 +103,9 @@ If your service provider is not listed, feel free to open a [source request issu
 - [District Council of Mount Remarkable](/doc/source/app_my_local_services_au.md) / mtr.sa.gov.au
 - [District Council of Robe](/doc/source/app_my_local_services_au.md) / robe.sa.gov.au
 - [District Council of Streaky Bay](/doc/source/app_my_local_services_au.md) / streakybay.sa.gov.au
+- [District Council of Yankalilla](/doc/source/frwa_com_au.md) / yankalilla.sa.gov.au
 - [Fleurieu Regional Waste Authority](/doc/source/app_my_local_services_au.md) / fleurieuregionalwasteauthority.com.au
+- [Fleurieu Regional Waste Authority](/doc/source/frwa_com_au.md) / fleurieuregionalwasteauthority.com.au
 - [Forbes Shire Council](/doc/source/impactapps_com_au.md) / forbes.nsw.gov.au
 - [Frankston City Council](/doc/source/frankston_vic_gov_au.md) / frankston.gov.au
 - [Gold Coast City Council](/doc/source/goldcoast_qld_gov_au.md) / goldcoast.qld.gov.au
@@ -114,6 +118,7 @@ If your service provider is not listed, feel free to open a [source request issu
 - [Impact Apps](/doc/source/impactapps_com_au.md) / impactapps.com.au
 - [Inner West Council (NSW)](/doc/source/innerwest_nsw_gov_au.md) / innerwest.nsw.gov.au
 - [Ipswich City Council](/doc/source/ipswich_qld_gov_au.md) / ipswich.qld.gov.au
+- [Kangaroo Island Council](/doc/source/frwa_com_au.md) / kangarooisland.sa.gov.au
 - [Kiama City Council](/doc/source/kiama_nsw_gov_au.md) / kiama.nsw.gov.au
 - [Knox City Council](/doc/source/knox_vic_gov_au.md) / knox.vic.gov.au
 - [Ku-ring-gai Council](/doc/source/impactapps_com_au.md) / krg.nsw.gov.au
@@ -746,6 +751,7 @@ If your service provider is not listed, feel free to open a [source request issu
 - [Reno Djurs](/doc/source/renodjurs_dk.md) / renodjurs.dk
 - [Renosyd](/doc/source/renosyd_dk.md) / renosyd.dk
 - [RenoWeb](/doc/source/renoweb_dk.md) / renoweb.dk
+- [RessourceIndsamling.dk](/doc/source/ressourceindsamling_dk.md) / ressourceindsamling.dk
 - [Silkeborg Forsyning](/doc/source/affaldonline_dk.md) / silkeborgforsyning.dk
 - [Vejle Kommune](/doc/source/affaldonline_dk.md) / vejle.dk
 - [Vestforbrænding](/doc/source/vestfor_dk.md) / selvbetjening.vestfor.dk
@@ -2126,7 +2132,7 @@ If your service provider is not listed, feel free to open a [source request issu
 - [Gospodarka Odpadami - Pelplin](/doc/source/sims_pl.md) / sisms.pl
 - [Gospodarka Odpadami - Starogard Gdański](/doc/source/sims_pl.md) / sisms.pl
 - [Kiedy śmieci](/doc/source/kiedysmieci_info.md) / kiedysmieci.info
-- [Kleszczewo/Kostrzyn](/doc/source/zys_harmonogram_pl.md) / puk-zys.pl/index.php/harmonogram-wywozow-2024-r
+- [Kleszczewo/Kostrzyn](/doc/source/zys_harmonogram_pl.md) / puk-zys.pl/index.php
 - [Klient Szablonowy - Ekostrażnik](/doc/source/sims_pl.md) / sisms.pl
 - [Klient Szablonowy - Karty Usług](/doc/source/sims_pl.md) / sisms.pl
 - [KOMUS](/doc/source/sims_pl.md) / sisms.pl
@@ -2176,6 +2182,7 @@ If your service provider is not listed, feel free to open a [source request issu
 - [Avfall & Återvinning Skaraborg](/doc/source/skaraborg_se.md) / avfallskaraborg.se
 - [Avfallsapp.se - Multi Source](/doc/source/avfallsapp_se.md) / avfallsapp.se
 - [Boden](/doc/source/edpevent_se.md) / boden.se
+- [Borlänge Energi](/doc/source/borlange_energi_se.md) / borlange-energi.se/appresource/4.534bcbed17430db9cdb1e5c2/12.3a9c9b4b19a7bbdffe85a22/getcontainerdata
 - [Borås Energi och Miljö](/doc/source/edpevent_se.md) / borasem.se
 - [EDPEvent - Multi Source](/doc/source/edpevent_se.md) / edpevent.se
 - [Gästrike Återvinnare](/doc/source/gastrikeatervinnare_se.md) / gastrikeatervinnare.se
@@ -2479,7 +2486,7 @@ If your service provider is not listed, feel free to open a [source request issu
 - [North Yorkshire Council - Ryedale](/doc/source/northyorks_ryedale_gov_uk.md) / northyorks.gov.uk
 - [North Yorkshire Council - Scarborough](/doc/source/northyorks_scarborough_gov_uk.md) / northyorks.gov.uk
 - [North Yorkshire Council - Selby](/doc/source/northyorks_selby_gov_uk.md) / northyorks.gov.uk
-- [Norwich City Council](/doc/source/norwich_gov_uk.md) / norwich.gov.uk
+- [Norwich City Council](/doc/source/norwich_gov_uk.md) / norwich.gov.uk/bins-and-recycling
 - [Nottingham City Council](/doc/source/nottingham_city_gov_uk.md) / nottinghamcity.gov.uk
 - [Oadby and Wigston Council](/doc/source/oadby_wigston_gov_uk.md) / oadby-wigston.gov.uk
 - [Oldham Council](/doc/source/oldham_gov_uk.md) / oldham.gov.uk
