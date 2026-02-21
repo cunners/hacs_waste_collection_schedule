@@ -48,8 +48,6 @@ class Source:
         today = datetime.now().date()
         target_weekday = day_map[target_day]
         days_ahead = (target_weekday - today.weekday()) % 7
-        if days_ahead == 0:
-            days_ahead = 7
 
         return today + timedelta(days=days_ahead)
 
