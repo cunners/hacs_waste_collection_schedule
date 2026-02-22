@@ -76,7 +76,7 @@ class Source:
 
         with requests.Session() as session:
             # --- STEP 1: Get the Dynamic Track Token ---
-            r1 = session.get(f"{BASE_URL}/mop.php")
+            r1 = session.get(f"{BASE_URL}/mop.php", timeout=30)
             r1.raise_for_status()
 
             soup = BeautifulSoup(r1.text, 'html.parser')
@@ -84,14 +84,14 @@ class Source:
             next_link_element = soup.find('a', href=lambda href: href and 'Track=' in href)
 
             if not next_link_element:
-                 raise Exception("Could not find dynamic Track token link in Step 1.")
+                raise ValueError("Could not find dynamic Track token link in Step 1.")
 
             dynamic_link = next_link_element.get('href')
 
             try:
                 track_token = dynamic_link.split('Track=')[1].split('&')[0]
             except IndexError:
-                raise Exception("Could not parse dynamic Track token in Step 1.")
+                raise ValueError("Could not parse dynamic Track token in Step 1.")
 
             # --- STEP 2: Submit the Address ---
             post_url = f"{BASE_URL}/mop.php?serviceID=A&Track={track_token}&seq=2"
@@ -103,7 +103,7 @@ class Source:
                 'address_postcode': self._postcode.replace('+', ' '), # Send post data un-encoded
             }
 
-            r2 = session.post(post_url, data=payload)
+            r2 = session.post(post_url, data=payload, timeout=30)
             r2.raise_for_status()
 
             # --- STEP 3: Select the Specific Address (Get pIndex) ---
@@ -118,18 +118,13 @@ class Source:
             )
 
             if not address_link:
-                if soup2.find(string=lambda t: t and "address not listed" in t.lower()):
-                    raise SourceArgumentNotFound(
-                        "number",
-                        self._number
-                    )
-                raise Exception(f"Could not find the address link for '{self._number}'.")
+                raise SourceArgumentNotFound("number", self._number)
 
             final_link_path = address_link['href']
             final_schedule_url = f"{BASE_URL}/{final_link_path}"
 
             # --- STEP 4: Scrape the Final Schedule ---
-            r3 = session.get(final_schedule_url)
+            r3 = session.get(final_schedule_url, timeout=30)
             r3.raise_for_status()
 
             soup3 = BeautifulSoup(r3.text, 'html.parser')
@@ -137,7 +132,7 @@ class Source:
             collection_entries = soup3.find_all('ul', class_='displayinlineblock')
 
             if not collection_entries:
-                raise Exception("Could not find any collection entries on the schedule page.")
+                raise ValueError("Could not find any collection entries on the schedule page.")
 
             for ul in collection_entries:
                 list_items = ul.find_all('li')
@@ -158,7 +153,7 @@ class Source:
                     Collection(
                         date=collection_date,
                         t=waste_type,
-                        icon=ICON_MAP.get(waste_type),
+                        icon=ICON_MAP.get(waste_type, "mdi:trash-can"),
                     )
                 )
 
