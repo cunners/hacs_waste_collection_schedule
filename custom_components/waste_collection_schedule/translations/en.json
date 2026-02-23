@@ -17508,14 +17508,16 @@
         "description": "Configure your service provider. {howto}More details: {docs_url}.",
         "data": {
           "calendar_title": "Calendar Title",
-          "address": "Address",
-          "house_name": "House Name",
           "house_number": "House Number",
+          "number": "House/Business Name/Number",
           "postcode": "Postcode",
-          "street": "Street"
+          "street": "Street Name"
         },
         "data_description": {
-          "calendar_title": "A more readable, or user-friendly, name for the waste calendar. If nothing is provided, the name returned by the source will be used."
+          "calendar_title": "A more readable, or user-friendly, name for the waste calendar. If nothing is provided, the name returned by the source will be used.",
+          "number": "Enter the house name (e.g., HAPSTEAD HALL) or number (e.g., 11), or the business name.",
+          "postcode": "Enter the postcode (e.g., RH17 6TB).",
+          "street": "Enter the street name (e.g., HIGH STREET)."
         }
       },
       "reconfigure_midsussex_gov_uk": {
@@ -17523,13 +17525,16 @@
         "description": "Configure your service provider. {howto}More details: {docs_url}.",
         "data": {
           "calendar_title": "Calendar Title",
-          "address": "Address",
-          "house_name": "House Name",
           "house_number": "House Number",
+          "number": "House/Business Name/Number",
           "postcode": "Postcode",
-          "street": "Street"
+          "street": "Street Name"
         },
-        "data_description": {}
+        "data_description": {
+          "number": "Enter the house name (e.g., HAPSTEAD HALL) or number (e.g., 11), or the business name.",
+          "postcode": "Enter the postcode (e.g., RH17 6TB).",
+          "street": "Enter the street name (e.g., HIGH STREET)."
+        }
       },
       "args_milton_keynes_gov_uk": {
         "title": "Configure Source",

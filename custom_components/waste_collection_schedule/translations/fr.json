@@ -17292,9 +17292,8 @@
         "description": "Configurez votre fournisseur de services. {howto}Plus de détails : {docs_url}.",
         "data": {
           "calendar_title": "Titre du Calendrier",
-          "address": "Adresse",
-          "house_name": "House Name",
           "house_number": "House Number",
+          "number": "Number",
           "postcode": "Code Postal",
           "street": "Street"
         },
@@ -17307,9 +17306,8 @@
         "description": "Configurez votre fournisseur de services. {howto}Plus de détails : {docs_url}.",
         "data": {
           "calendar_title": "Titre du Calendrier",
-          "address": "Adresse",
-          "house_name": "House Name",
           "house_number": "House Number",
+          "number": "Number",
           "postcode": "Code Postal",
           "street": "Street"
         },
