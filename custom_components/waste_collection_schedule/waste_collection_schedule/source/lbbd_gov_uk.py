@@ -35,23 +35,30 @@ class Source:
         self._uprn: str = str(uprn)
 
     def fetch(self):
-        r = requests.get(API_URL.format(uprn=self._uprn))
-        rubbish_data = json.loads(r.content)
+        headers = {"user-agent": "Home-Assitant-waste-col-sched/2.11"}
+
+        r = requests.get(API_URL.format(uprn=self._uprn), headers=headers, timeout=30)
+        rubbish_data = r.json()
 
         entries = []
 
-        for next_collection in rubbish_data["results"]:
+        for result in rubbish_data["results"]:
             collection_type = COLLECTION_MAP.get(
-                next_collection["bin_type"],
-                {"waste_type": next_collection["bin_type"], "icon": None},
-            )
-            collection_date = next_collection["nextcollection"]
-            entries.append(
-                Collection(
-                    date=datetime.strptime(collection_date, "%A %d %B %Y").date(),
-                    t=collection_type["waste_type"],
-                    icon=collection_type["icon"],
-                )
+                result["bin_type"],
+                {"waste_type": result["bin_type"], "icon": None},
             )
 
+            for collection_date in (
+                ([result["nextcollection"]] if result["nextcollection"] else [])
+                + result["futurecollections"]
+            ):
+
+                entries.append(
+                    Collection(
+                        date=datetime.strptime(collection_date, "%A %d %B %Y").date(),
+                        t=collection_type["waste_type"],
+                        icon=collection_type["icon"],
+                    )
+                )
+                
         return entries
