@@ -3,40 +3,46 @@ from bs4 import BeautifulSoup
 from dateutil import parser
 from waste_collection_schedule import Collection
 
-TITLE = "London Borough of Southwark"  # Title will show up in README.md and info.md
-DESCRIPTION = "Source script for southwark.gov.uk"  # Describe your source
-URL = "https://www.southwark.gov.uk/"  # Insert url to service homepage. URL will show up in README.md and info.md
-TEST_CASES = {"Test_001": {"uprn": "200003455089"}, "Test_002": {"uprn": "200003379615"}}
+TITLE = "London Borough of Southwark"
+DESCRIPTION = "Source for London Borough of Southwark waste collection."
+URL = "https://www.southwark.gov.uk/"
+COUNTRY = "uk"
+TEST_CASES = {
+    "Test_001": {"uprn": "200003455089"},
+    "Test_002": {"uprn": "200003379615"},
+}
 HEADERS = {"user-agent": "Mozilla/5.0"}
 ICON_MAP = {
     "General Waste": "mdi:trash-can",
     "Recycling": "mdi:recycle",
     "Recycling Sack": "mdi:recycle",
     "Food Waste": "mdi:food-apple",
-    "Communal Food": "mdi:food-apple"
+    "Communal Food": "mdi:food-apple",
 }
 NAME_MAP = {
     "Refuse": "General Waste",
-    "Communal Food": "Food Waste"
+    "Communal Food": "Food Waste",
 }
 
 PARAM_DESCRIPTIONS = {
     "en": {
-        "uprn": "An easy way to discover your Unique Property Reference Number (UPRN) is by going to https://www.findmyaddress.co.uk/ and entering in your address details."
-    },
-    "de": {
-        "uprn": "Eine einfache Möglichkeit, Ihre Unique Property Reference Number (UPRN) zu finden, besteht darin, auf https://www.findmyaddress.co.uk/ zu gehen und Ihre Adressdaten einzugeben."
+        "uprn": "Unique Property Reference Number (UPRN)",
     },
 }
 
+HOW_TO_GET_ARGUMENTS_DESCRIPTION = {
+    "en": "An easy way to discover your Unique Property Reference Number (UPRN) is by going to https://www.findmyaddress.co.uk/ and entering in your address details.",
+}
+
 API_URL = "https://services.southwark.gov.uk/bins/lookup/"
+
 
 class Source:
     def __init__(self, uprn):
         self._uprn = str(uprn).zfill(12)
 
     def fetch(self):
-        url=f"{API_URL}{self._uprn}"
+        url = f"{API_URL}{self._uprn}"
 
         response = requests.get(
             url,
@@ -70,8 +76,8 @@ class Source:
 
             entries.append(
                 Collection(
-                    date=date, 
-                    t=bin_type, 
+                    date=date,
+                    t=bin_type,
                     icon=ICON_MAP.get(bin_type, "mdi:trash-can"),
                 )
             )

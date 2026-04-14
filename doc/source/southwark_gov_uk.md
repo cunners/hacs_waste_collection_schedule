@@ -1,6 +1,6 @@
 # London Borough of Southwark
 
-Support for schedules provided by the [London Borough of Southwark](https://services.southwark.gov.uk/bins/lookup/), serving Southwark, UK.
+Support for schedules provided by [London Borough of Southwark](https://www.southwark.gov.uk/), UK.
 
 ## Configuration via configuration.yaml
 
